@@ -1,0 +1,35 @@
+version: "3"
+services:
+  postgres:
+    restart: always
+    image: postgres:16.4
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: blogs
+    volumes:
+      - postgresDB:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    networks:
+      backend:
+
+  pgadmin:
+    image: 'docker.io/dpage/pgadmin4:latest'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - 5050:80
+    volumes:
+      - postgresDB:/var/lib/postgresql/pgadmin/
+    networks:
+      backend:
+
+volumes:
+  postgresDB:
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
