@@ -35,17 +35,9 @@ export const BlogPostsData: BLOG[] = [
         body: "You've got to dig it to dig it, you dig?",
       },
       {
-        __component: "shared.media",
-        id: 8,
-      },
-      {
         __component: "shared.rich-text",
         id: 15,
         body: "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!",
-      },
-      {
-        __component: "shared.slider",
-        id: 7,
       },
     ],
   },

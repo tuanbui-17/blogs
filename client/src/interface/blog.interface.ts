@@ -1,3 +1,5 @@
+import { BLOCK } from "./block.interface";
+
 interface COVER {
   url: string;
 }
@@ -9,13 +11,6 @@ interface AUTHOR {
 interface CATEGORY {
   name: string;
   slug: string;
-}
-
-interface BLOCK {
-  __component: string;
-  id: number;
-  body?: string;
-  title?: string;
 }
 
 export interface BLOG {
