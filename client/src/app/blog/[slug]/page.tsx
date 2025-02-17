@@ -4,6 +4,7 @@ import { BlogPostsData } from "@/data/blog.data";
 import { formatTimestamp } from "@/utils/date";
 import { BLOG } from "@/interface/blog.interface";
 import BlockRenderer from "@/components/Block/BlockRenderer";
+import Breadcrumb from "@/components/Blog/Breadcrumb";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = await params;
@@ -11,6 +12,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div>
+      <Breadcrumb />
       <Image
         src="/blog-placeholder-1.jpg"
         alt="404"
