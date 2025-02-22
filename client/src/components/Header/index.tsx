@@ -1,10 +1,7 @@
-"use client";
-
-import Link from "next/link";
 import { GithubIcon } from "@/components/Icon/GithubIcon";
 import { LinkedinIcon } from "@/components/Icon/LinkedinIcon";
-import { usePathname } from "next/navigation";
 import ThemeToggle from "../Theme/ThemeToggle";
+import NavLinks from "../NavLinks";
 
 const menuItems = [
   { name: "Home", path: "/" },
@@ -13,30 +10,16 @@ const menuItems = [
 ];
 
 const Header = () => {
-  const pathname = usePathname();
-
-  const isActivePath = (path: string) => {
-    if (pathname.includes("/blog") && path === "/blog") {
-      return true;
-    }
-
-    return pathname === path;
-  };
-
   return (
     <div className="py-6 text-lg">
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex space-x-6">
-          {menuItems.map((item) => (
-            <div
-              key={item.path}
-              className={`${
-                isActivePath(item.path) ? "text-accent-400" : ""
-              } relative hover:text-accent-400 cursor-pointer transition-colors duration-200 ease-in-out`}
-            >
-              <Link href={item.path}>{item.name}</Link>
-            </div>
-          ))}
+      <div className="flex flex-row justify-between items-center mb-6">
+        <div className="flex items-center space-x-4">
+          <img
+            className="w-10 h-10 rounded-full border border-base-400"
+            src="/avatar.webp"
+            alt="Rounded avatar"
+          ></img>
+          <p className="font-bold">Tuan Bui</p>
         </div>
         <div className="flex space-x-4">
           <a href="#" target="_blank" rel="noopener noreferrer">
@@ -58,6 +41,7 @@ const Header = () => {
           <ThemeToggle />
         </div>
       </div>
+      <NavLinks />
     </div>
   );
 };

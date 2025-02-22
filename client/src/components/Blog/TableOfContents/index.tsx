@@ -9,7 +9,7 @@ const TableOfContents = ({ markdown }: { markdown: string }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 128) {
+      if (window.scrollY > 192) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -22,7 +22,7 @@ const TableOfContents = ({ markdown }: { markdown: string }) => {
   return (
     <div
       className={`w-72 bg-base-100 dark:bg-base-800 p-4 rounded-xl shadow border border-base-400 dark:border-base-700 ${
-        isSticky ? "fixed top-0 right-32" : "absolute top-32 right-32"
+        isSticky ? "fixed top-0 right-32" : "absolute top-48 right-32"
       }`}
     >
       <p className="text-md font-bold mb-2">Table Of Contents</p>

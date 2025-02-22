@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const BlogPosts = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       {BlogPostsData.map((post: BLOG) => {
         return (
           <Link

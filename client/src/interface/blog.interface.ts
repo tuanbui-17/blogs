@@ -22,7 +22,6 @@ export interface BLOG {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    type: string;
     readTime: string;
     cover: COVER;
     author: AUTHOR;
