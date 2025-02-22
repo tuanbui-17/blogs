@@ -5,13 +5,22 @@ import { formatTimestamp } from "@/utils/date";
 import { BLOG } from "@/interface/blog.interface";
 import BlockRenderer from "@/components/Block/BlockRenderer";
 import Breadcrumb from "@/components/Blog/Breadcrumb";
+import TableOfContents from "@/components/Blog/TableOfContents";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = await params;
   const blog: BLOG = BlogPostsData.find((post) => post.slug === slug) as BLOG;
 
+  let markdown = "";
+  blog.blocks.forEach((block) => {
+    if (block.__component === "shared.rich-text") {
+      markdown += block.body;
+    }
+  });
+
   return (
     <div>
+      <TableOfContents markdown={markdown} />
       <Breadcrumb />
       <Image
         src="/blog-placeholder-1.jpg"

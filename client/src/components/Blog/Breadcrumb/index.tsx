@@ -21,7 +21,7 @@ const Breadcrumb = () => {
                 <>
                   <Link
                     href={href}
-                    className="flex items-center text-sm capitalize text-gray-500 hover:text-yellow-500 focus:text-yellow-500 focus:outline-none dark:text-neutral-500 dark:hover:text-yellow-500 dark:focus:text-yellow-500"
+                    className="flex items-center text-sm capitalize text-gray-400 hover:text-accent-400 focus:text-accent-400 focus:outline-none dark:text-neutral-400 dark:hover:text-accent-400 dark:focus:text-accent-400"
                   >
                     {value}
                   </Link>
