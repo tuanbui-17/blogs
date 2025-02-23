@@ -29,11 +29,11 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         height={400}
         className="w-full h-80 object-cover rounded-xl shadow border border-base-400 dark:border-base-700"
       />
-      <div className="flex mt-8 items-center gap-x-4 text-xs">
+      <div className="flex mt-8 items-center gap-x-4">
         <p className="text-base-400 text-sm text-right">
           {formatTimestamp(blog.updatedAt)}
         </p>
-        <button className="rounded-xl bg-base-100 px-3 py-1.5 text-sm font-medium text-base-700 hover:bg-accent-500/10 dark:bg-base-800 dark:hover:bg-accent-500/10 hover:dark:text-accent-400 hover:text-accent-600 dark:text-base-300 border border-base-200 dark:border-base-700 hover:border-accent-600/20 dark:hover:border-accent-600/20 transition-colors duration-100">
+        <button className="text-sm font-medium hover:scale-105 hover:text-accent-400 duration-100">
           {blog.category.name}
         </button>
       </div>

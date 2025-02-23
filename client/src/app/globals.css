@@ -129,5 +129,5 @@ body {
 }
 
 .input {
-  @apply w-full px-4 py-2 border border-base-400 rounded-lg focus:outline-none bg-transparent outline-none box-border dark:hover:border-base-100 hover:border-base-600 transition-colors duration-200 ease-in-out;
+  @apply w-full px-4 py-2 border border-base-400 rounded-md focus:outline-none bg-transparent outline-none box-border dark:hover:border-base-100 hover:border-base-600 transition-colors duration-200 ease-in-out;
 }

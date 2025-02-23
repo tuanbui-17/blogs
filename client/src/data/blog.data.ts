@@ -18,7 +18,7 @@ export const BlogPostsData: BLOG[] = [
       name: "John Doe",
     },
     category: {
-      name: "tech",
+      name: "#tech",
       slug: "tech",
     },
     blocks: [
@@ -57,7 +57,7 @@ export const BlogPostsData: BLOG[] = [
       name: "David Doe",
     },
     category: {
-      name: "nature",
+      name: "#nature",
       slug: "nature",
     },
     blocks: [
@@ -96,7 +96,7 @@ export const BlogPostsData: BLOG[] = [
       name: "Sarah Baker",
     },
     category: {
-      name: "nature",
+      name: "#nature",
       slug: "nature",
     },
     blocks: [
@@ -135,7 +135,7 @@ export const BlogPostsData: BLOG[] = [
       name: "Sarah Baker",
     },
     category: {
-      name: "news",
+      name: "#news",
       slug: "news",
     },
     blocks: [
@@ -174,7 +174,7 @@ export const BlogPostsData: BLOG[] = [
       name: "David Doe",
     },
     category: {
-      name: "story",
+      name: "#story",
       slug: "story",
     },
     blocks: [
