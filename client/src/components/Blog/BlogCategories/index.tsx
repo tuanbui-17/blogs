@@ -14,7 +14,7 @@ const BlogCategories = () => {
   return (
     <div className="flex flex-wrap gap-4 text-md font-medium">
       <button
-        className="hover:scale-105 hover:text-accent-400 duration-100 text-accent-400"
+        className="hover:text-accent-400 duration-200 text-accent-400"
         onClick={() => onChangeCategory("#all")}
         aria-pressed={activeCategory === "#all"}
       >
@@ -24,7 +24,7 @@ const BlogCategories = () => {
         return (
           <button
             key={category.id}
-            className="hover:scale-105 hover:text-accent-400 duration-100"
+            className="hover:text-accent-400 duration-200"
             onClick={() => onChangeCategory(category.slug)}
             aria-pressed={activeCategory === category.slug}
           >

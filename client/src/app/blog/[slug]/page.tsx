@@ -6,6 +6,7 @@ import { BLOG } from "@/interface/blog.interface";
 import BlockRenderer from "@/components/Block/BlockRenderer";
 import Breadcrumb from "@/components/Blog/Breadcrumb";
 import TableOfContents from "@/components/Blog/TableOfContents";
+import ScrollToTop from "@/components/Blog/ScrollToTop";
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = await params;
@@ -33,13 +34,14 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         <p className="text-base-400 text-sm text-right">
           {formatTimestamp(blog.updatedAt)}
         </p>
-        <button className="text-sm font-medium hover:scale-105 hover:text-accent-400 duration-100">
+        <button className="text-sm font-medium hover:text-accent-400 duration-200">
           {blog.category.name}
         </button>
       </div>
       <h1 className="text-3xl font-bold mt-4">{blog.title}</h1>
       <p className="text-base-400 mt-4">{blog.description}</p>
       <BlockRenderer blocks={blog.blocks} />
+      <ScrollToTop />
     </div>
   );
 };
