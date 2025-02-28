@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_techs",
+  "info": {
+    "displayName": "Techs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "techs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tech"
+    }
+  }
+}

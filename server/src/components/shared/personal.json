@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_personals",
+  "info": {
+    "displayName": "Personal"
+  },
+  "options": {},
+  "attributes": {
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.personal-detail"
+    },
+    "title": {
+      "type": "string",
+      "default": "Personal"
+    }
+  }
+}

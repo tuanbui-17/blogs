@@ -1,13 +1,26 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedMedia extends Struct.ComponentSchema {
-  collectionName: 'components_shared_media';
+export interface SharedPersonal extends Struct.ComponentSchema {
+  collectionName: 'components_shared_personals';
   info: {
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'Personal';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    details: Schema.Attribute.Component<'shared.personal-detail', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Personal'>;
+  };
+}
+
+export interface SharedPersonalDetail extends Struct.ComponentSchema {
+  collectionName: 'components_shared_personal_details';
+  info: {
+    displayName: 'PersonalDetail';
+  };
+  attributes: {
+    type: Schema.Attribute.Enumeration<
+      ['name', 'role', 'phone', 'email', 'location']
+    >;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -50,26 +63,38 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
+export interface SharedTech extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teches';
   info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
+    displayName: 'Tech';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTechs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_techs';
+  info: {
+    description: '';
+    displayName: 'Techs';
+  };
+  attributes: {
+    techs: Schema.Attribute.Component<'shared.tech', true>;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.media': SharedMedia;
+      'shared.personal': SharedPersonal;
+      'shared.personal-detail': SharedPersonalDetail;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+      'shared.tech': SharedTech;
+      'shared.techs': SharedTechs;
     }
   }
 }

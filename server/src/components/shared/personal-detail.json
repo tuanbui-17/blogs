@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_personal_details",
+  "info": {
+    "displayName": "PersonalDetail"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "name",
+        "role",
+        "phone",
+        "email",
+        "location"
+      ]
+    }
+  }
+}
