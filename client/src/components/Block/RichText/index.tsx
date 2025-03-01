@@ -14,7 +14,7 @@ const createHeading = (Tag: keyof JSX.IntrinsicElements) => {
 
 const RichText = ({ body }: Readonly<RICHTEXT>) => {
   return (
-    <div className="rich-text py-6">
+    <div className="rich-text pt-4">
       <ReactMarkdown
         components={{
           h1: createHeading("h1"),

@@ -2,6 +2,7 @@ import { BLOCK } from "@/interface/block.interface";
 import React from "react";
 import RichText from "../RichText";
 import Quote from "../Quote/Quote";
+import Techs from "../Techs";
 
 const blockRenderer = (block: BLOCK, index: number) => {
   switch (block.__component) {
@@ -9,6 +10,8 @@ const blockRenderer = (block: BLOCK, index: number) => {
       return <RichText {...block} key={index} />;
     case "shared.quote":
       return <Quote {...block} key={index} />;
+    case "shared.techs":
+      return <Techs {...block} key={index} />;
     default:
       return null;
   }

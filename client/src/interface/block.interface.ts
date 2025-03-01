@@ -1,4 +1,6 @@
-export type BLOCK = RICHTEXT | QUOTE;
+import { TECH } from "./tech.interface";
+
+export type BLOCK = RICHTEXT | QUOTE | TECHS;
 
 export interface RICHTEXT {
     __component: "shared.rich-text";
@@ -13,3 +15,8 @@ export interface QUOTE {
     body: string;
 }
 
+export interface TECHS {
+    __component: "shared.techs";
+    id: number;
+    techs: TECH[];
+}
